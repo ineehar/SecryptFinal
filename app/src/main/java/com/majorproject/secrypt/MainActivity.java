@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private static final int RESULT_PICK_CONTACT =1;
     EditText pNumber, message;
     ImageButton contacts;
+    Button myMessages;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,15 @@ public class MainActivity extends AppCompatActivity {
         pNumber = (EditText) findViewById(R.id.editTextPhone);
         message = (EditText) findViewById(R.id.editTextMessage);
         contacts = findViewById(R.id.imageContact);
+        myMessages = findViewById(R.id.receivedButton);
+
+        myMessages.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), ReceiverActivity.class);
+                startActivity(intent);
+            }
+        });
         
         
         contacts.setOnClickListener(new View.OnClickListener() {

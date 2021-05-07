@@ -72,4 +72,17 @@
         app:layout_constraintTop_toBottomOf="@+id/textviewSecrypt"
         android:background="@drawable/contactsicon"/>
 
+    <Button
+        android:id="@+id/receivedButton"
+        android:layout_width="153dp"
+        android:layout_height="52dp"
+        android:onClick="send"
+        android:text="My Messages"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sendButton"
+        app:layout_constraintVertical_bias="0.08" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
